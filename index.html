@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uno App</title>
+	<link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <div class="main-menu-container">
+    <div class="main-menu">
+      <input id="group-input" placeholder="group"/>
+      <input id="username-input" placeholder="username"/>
+      <button id="join-button">Join</button>
+    </div>
+  </div>
+
+  <div class="game-container">
+    <div id="deck">
+      <div class="card-container">
+        <svg viewBox="0 0 60 90"width="100%"height="100%"> <rect width="60"height="90"rx="10"ry="10"x="0"y="0"style="fill:#ffffff; fill-opacity:1; fill-rule:evenodd; stroke:black; stroke-width:0.5; stroke-miterlimit:4; stroke-dasharray:none;"/> <rect  width="50"height="80"rx="5"ry="5"x="5"y="5"style="fill:#000000; fill-opacity:1; fill-rule:evenodd; stroke:none;"/><path d="m 45, 20 c -22.09139,0 -40,17.90861 -40,40 0,5.52285 4.47715,10 10,10 22.09139,0 40,-17.90861 40,-40 0,-5.52285 -4.47715,-10 -10,-10 z"style="fill:#ffffff; fill-opacity:1; fill-rule:evenodd; stroke:none;"/> <path d="m 45,20  c -16.782225,0  -31.1256,10.34731  -37.0625,25  -1.878175,4.63547  -2.9375,9.69084  -2.9375,15  0,5.52285  4.47715,10  10,10  16.782225,0  31.1256,-10.34731  37.0625,-25  1.878175,-4.63547  2.9375,-9.69084  2.9375,-15  0,-5.52285  -4.47715,-10  -10,-10   z" style="fill:none;stroke:#fff;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;opacity:1"/><path d="m  45,20 c  -16.782225,0 -31.1256,10.34731  -37.0625,25  l 22.0625,0  15,-25  z" style="fill:#dc0e0e;fill-opacity:1;fill-rule:evenodd;stroke:none"/><path d="m  44.5,20 -15,25  22.0625,0  c 	 1.878175,-4.63547  2.9375,-9.69084  2.9375,-15  0,-5.52285  -4.47715,-10  -10,-10  z" style="fill:#dc0e0e;fill-opacity:1;fill-rule:evenodd;stroke:none"/><path d="m 8,44.8 c -1.878175,4.63547 -2.9375,9.69084 -2.9375,15 0,5.52285 4.47715,10 10,10 l 15,-25 -22.0625,0 z" style="fill:#dc0e0e;fill-opacity:1;fill-rule:evenodd;stroke:none"/><path d="m 29.5,44.8 -15,25 c 16.782225,0 31.1256,-10.34731 37.0625,-25 l-22.0625,0 z" style="fill:#dc0e0e;fill-opacity:1;fill-rule:evenodd;stroke:none"/></svg>
+      </div>
+    </div>
+    <div id="pile"></div>
+    <div id="players"></div>
+    <div id="hand"></div>
+  </div>
+
+  <script src="https://cdn.socket.io/4.0.0/socket.io.min.js" integrity="sha384-DkkWv9oJFWLIydBXXjkBWnG1/fuVhw8YPBq37uvvD6WSYRFRqr21eY5Dg9ZhmWdy" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+</body>
+</html>

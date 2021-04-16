@@ -1,0 +1,259 @@
+body {
+  margin: 0;
+  background-color: #667788;
+}
+
+.main-menu-container {
+  height: 100vh;
+  background-color: cornflowerblue;
+}
+
+.main-menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hidden {
+  display: none;
+}
+
+.card-container {  
+  margin: 0 auto;
+  
+  display: inline-block;
+  
+  width: var(--card-base-width);
+  height: Calc(var(--card-base-width) * 1.5);
+  border-radius: 15.66%/10.44%; /* ~47px at 300px wide, scales with card */
+  
+  box-shadow: 0
+              Calc(Var(--card-base-width)/75)
+              Calc(Var(--card-base-width)/75*2)
+              0
+              #888;
+}
+
+svg {
+  pointer-events: none;
+}
+
+@media screen and (min-width: 860px) {
+  :root {
+    --card-base-width: 7rem;
+  }
+
+  .game-container {
+    margin: 0 auto;
+    padding: 2rem;
+    height: 100vh;
+    max-width: 70rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 3fr;
+    grid-template-areas: 
+      "deck pile players"
+      "hand hand hand";
+  }
+  
+  #deck {
+    grid-area: deck;
+    justify-self: start;
+    padding-left: 7rem;
+  }
+  
+  #pile {
+    grid-area: pile;
+    justify-self: center;
+  }
+  
+  #players {
+    font-size: 2.5rem;
+    color: #efefef;
+    grid-area: players;
+    justify-self: end;
+    padding-right: 7rem;
+  }
+  
+  #hand {
+    grid-area: hand;
+    justify-self: stretch;
+    padding: 0 7rem;
+  }  
+}
+
+@media screen and (max-width: 859px) {
+  :root {
+    --card-base-width: 5.5rem;
+  }
+
+  .game-container {
+    margin: 0 auto;
+    padding: 1rem;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 3fr;
+    grid-template-areas: 
+      "deck pile players"
+      "hand hand hand";
+  }
+  
+  #deck {
+    grid-area: deck;
+    justify-self: start;
+    padding-left: 4.5rem;
+  }
+  
+  #pile {
+    grid-area: pile;
+    justify-self: center;
+    padding-right: 4.5rem;
+  }
+  
+  #players {
+    font-size: 1.5rem;
+    color: #efefef;
+    grid-area: players;
+    justify-self: end;
+  }
+  
+  #hand {
+    grid-area: hand;
+    justify-self: stretch;
+    padding: 0 4.5rem;
+  }  
+}
+
+@media screen and (max-width: 619px) {
+  :root {
+    --card-base-width: 4rem;
+  }
+
+  .game-container {
+    margin: 0 auto;
+    padding: 1rem;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 3fr;
+    grid-template-areas: 
+      "deck pile players"
+      "hand hand hand";
+  }
+  
+  #deck {
+    grid-area: deck;
+    justify-self: start;
+    padding-left: 3rem;
+  }
+  
+  #pile {
+    grid-area: pile;
+    justify-self: center;
+    padding-right: 3rem;
+  }
+  
+  #players {
+    font-size: 1.25rem;
+    color: #efefef;
+    grid-area: players;
+    justify-self: end;
+  }
+  
+  #hand {
+    grid-area: hand;
+    justify-self: stretch;
+    padding: 0 3rem;
+  }  
+}
+
+@media screen and (max-width: 449px) {
+  :root {
+    --card-base-width: 3rem;
+  }
+
+  .game-container {
+    margin: 0 auto;
+    padding: 1rem;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 3fr;
+    grid-template-areas: 
+      "deck pile players"
+      "hand hand hand";
+  }
+  
+  #deck {
+    grid-area: deck;
+    justify-self: start;
+    padding-left: 1rem;
+  }
+  
+  #pile {
+    grid-area: pile;
+    justify-self: center;
+    padding-right: 1rem;
+  }
+  
+  #players {
+    font-size: 1.25rem;
+    color: #efefef;
+    grid-area: players;
+    justify-self: end;
+  }
+  
+  #hand {
+    grid-area: hand;
+    justify-self: stretch;
+    padding: 0 1rem;
+  }  
+}
+
+@media screen and (max-width: 239px) {
+  :root {
+    --card-base-width: 2.5rem;
+  }
+
+  .game-container {
+    margin: 0 auto;
+    padding: 1rem;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+      "deck pile"
+      "hand hand"
+      "players players";
+  }
+  
+  #deck {
+    grid-area: deck;
+    justify-self: start;
+    padding-left: .25rem;
+  }
+  
+  #pile {
+    grid-area: pile;
+    justify-self: start;
+    padding-left: .25rem;
+  }
+  
+  #players {
+    font-size: 1rem;
+    color: #efefef;
+    grid-area: players;
+    justify-self: start;
+    align-self: center;
+    padding: .25rem;
+  }
+  
+  #hand {
+    grid-area: hand;
+    justify-self: stretch;
+    padding: 0 .25rem;
+  }  
+}
