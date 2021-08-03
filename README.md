@@ -1,1 +1,1 @@
-# uno-game
+# Online Uno Card Game
