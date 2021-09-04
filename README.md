@@ -1,6 +1,8 @@
 # Online Uno Card Game
 
-This application that lets you play Uno with anyone else on any internet-connected device just by going to the website. It is built with NodeJS and Socket.io and deployed on a Linux VPS. You can try it out live at its website [here](http://143.198.106.140/).
+This application that lets you play Uno with anyone else on any internet-connected device just by going to the website. It is built with NodeJS and Socket.io and deployed on a Linux VPS. 
+
+You can try it out live at its website [here](http://143.198.106.140/).
 
 To play, all you need to do is decide on a group name and then each player can choose whatever username they want from there and that’s it.
 
